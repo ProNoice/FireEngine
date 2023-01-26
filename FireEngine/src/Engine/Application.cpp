@@ -7,7 +7,7 @@
 
 namespace FireEngine {
 	Application::Application() {
-
+		m_Window = std::unique_ptr<Window>(Window::Create());
 	}
 
 	Application::~Application() {
@@ -16,17 +16,9 @@ namespace FireEngine {
 
 	void Application::Run()
 	{
-		WindowResizeEvent e(1280, 720);
-		if (e.IsInCategory(EventCategoryApplication))
-		{
-			FE_INFO(e);
+		while (m_Running) {
+			m_Window->OnUpdate();
 		}
-		if (e.IsInCategory(EventCategoryInput))
-		{
-			FE_INFO(e);
-		}
-
-		while (true);
 	}
 
 }

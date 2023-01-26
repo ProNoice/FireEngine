@@ -1,3 +1,6 @@
 [submodule "FireEngine/vendor/spdlog"]
 	path = FireEngine/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "FireEngine/vendor/GLFW"]
+	path = FireEngine/vendor/GLFW
+	url = https://github.com/TheCherno/glfw
