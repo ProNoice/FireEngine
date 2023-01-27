@@ -64,6 +64,8 @@ project "FireEngine"
 
 	filter "configurations:Debug"
 		defines "FE_DEBUG"
+		staticruntime "Off"
+		runtime "Debug"
 		symbols "On"
 
 	filter "configurations:Release"
@@ -110,6 +112,8 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "FE_DEBUG"
+		staticruntime "Off"
+		runtime "Debug"
 		symbols "On"
 
 	filter "configurations:Release"
